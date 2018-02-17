@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFormHomeCalc", "WFormHomeCalc.csproj", "{45718D45-6A54-417B-83F5-384A3F633E11}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Credit", "..\Google.Credit\Google.Credit.csproj", "{DA2D4124-CCE6-4AD9-B72F-3E950C44FCDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBase", "..\DataBase\DataBase.csproj", "{E5CF34D8-AF2D-4B70-A09A-73454363F5D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{45718D45-6A54-417B-83F5-384A3F633E11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45718D45-6A54-417B-83F5-384A3F633E11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45718D45-6A54-417B-83F5-384A3F633E11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA2D4124-CCE6-4AD9-B72F-3E950C44FCDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA2D4124-CCE6-4AD9-B72F-3E950C44FCDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA2D4124-CCE6-4AD9-B72F-3E950C44FCDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA2D4124-CCE6-4AD9-B72F-3E950C44FCDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5CF34D8-AF2D-4B70-A09A-73454363F5D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5CF34D8-AF2D-4B70-A09A-73454363F5D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5CF34D8-AF2D-4B70-A09A-73454363F5D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5CF34D8-AF2D-4B70-A09A-73454363F5D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

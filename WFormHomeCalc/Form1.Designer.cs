@@ -36,6 +36,7 @@
             this.btn_Exec = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tb_Result = new System.Windows.Forms.TextBox();
+            this.tb_History = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -49,7 +50,7 @@
             this.groupBox1.Location = new System.Drawing.Point(5, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(10);
-            this.groupBox1.Size = new System.Drawing.Size(324, 55);
+            this.groupBox1.Size = new System.Drawing.Size(415, 55);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Операция";
@@ -65,7 +66,7 @@
             "div"});
             this.cb_Operation.Location = new System.Drawing.Point(10, 23);
             this.cb_Operation.Name = "cb_Operation";
-            this.cb_Operation.Size = new System.Drawing.Size(304, 21);
+            this.cb_Operation.Size = new System.Drawing.Size(395, 21);
             this.cb_Operation.TabIndex = 0;
             // 
             // groupBox2
@@ -75,7 +76,7 @@
             this.groupBox2.Location = new System.Drawing.Point(5, 60);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(10);
-            this.groupBox2.Size = new System.Drawing.Size(324, 60);
+            this.groupBox2.Size = new System.Drawing.Size(415, 60);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Аргументы";
@@ -85,7 +86,7 @@
             this.tb_Input.Dock = System.Windows.Forms.DockStyle.Top;
             this.tb_Input.Location = new System.Drawing.Point(10, 23);
             this.tb_Input.Name = "tb_Input";
-            this.tb_Input.Size = new System.Drawing.Size(304, 20);
+            this.tb_Input.Size = new System.Drawing.Size(395, 20);
             this.tb_Input.TabIndex = 0;
             this.tb_Input.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Input_KeyPress);
             // 
@@ -93,15 +94,15 @@
             // 
             this.panel1.Controls.Add(this.btn_Exec);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(5, 236);
+            this.panel1.Location = new System.Drawing.Point(5, 295);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(324, 70);
+            this.panel1.Size = new System.Drawing.Size(415, 70);
             this.panel1.TabIndex = 3;
             // 
             // btn_Exec
             // 
             this.btn_Exec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Exec.Location = new System.Drawing.Point(223, 16);
+            this.btn_Exec.Location = new System.Drawing.Point(314, 16);
             this.btn_Exec.Name = "btn_Exec";
             this.btn_Exec.Size = new System.Drawing.Size(91, 48);
             this.btn_Exec.TabIndex = 0;
@@ -111,12 +112,13 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.tb_History);
             this.groupBox3.Controls.Add(this.tb_Result);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(5, 120);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(10);
-            this.groupBox3.Size = new System.Drawing.Size(324, 116);
+            this.groupBox3.Size = new System.Drawing.Size(415, 175);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Результат";
@@ -127,14 +129,25 @@
             this.tb_Result.Location = new System.Drawing.Point(10, 23);
             this.tb_Result.Name = "tb_Result";
             this.tb_Result.ReadOnly = true;
-            this.tb_Result.Size = new System.Drawing.Size(304, 20);
+            this.tb_Result.Size = new System.Drawing.Size(395, 20);
             this.tb_Result.TabIndex = 0;
+            // 
+            // tb_History
+            // 
+            this.tb_History.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tb_History.Location = new System.Drawing.Point(10, 43);
+            this.tb_History.Margin = new System.Windows.Forms.Padding(10);
+            this.tb_History.Multiline = true;
+            this.tb_History.Name = "tb_History";
+            this.tb_History.ReadOnly = true;
+            this.tb_History.Size = new System.Drawing.Size(395, 122);
+            this.tb_History.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 311);
+            this.ClientSize = new System.Drawing.Size(425, 370);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox2);
@@ -163,6 +176,7 @@
         private System.Windows.Forms.Button btn_Exec;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox tb_Result;
+        private System.Windows.Forms.TextBox tb_History;
     }
 }
 

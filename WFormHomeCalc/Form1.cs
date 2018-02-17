@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataBase.Models;
+using DataBase.NHibernate.Repositories;
+using System;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
@@ -10,15 +12,26 @@ namespace WFormHomeCalc
 
         private Calc calc;
 
+        private NHBaseRepository Repository;
+
         public Form1()
         {
             InitializeComponent();
-            fsafa
+            
             calc = new Calc();
+            Repository = new NHBaseRepository();
 
             cb_Operation.Items.Clear();
             cb_Operation.Items.AddRange(calc.GetOperationsName());
             cb_Operation.Text = cb_Operation.Items[0].ToString();
+
+            // получаем из базы всю историю
+            var history = Repository.GetAll();
+
+            foreach (var historyItem in history)
+            {
+                tb_History.AppendText($"{historyItem.NameOperation}({historyItem.Args})={historyItem.Result} | {historyItem.Time}\r\n");
+            }
         }
 
 
@@ -38,6 +51,24 @@ namespace WFormHomeCalc
             var result = calc.Exec(cb_Operation.Text, args);
 
             tb_Result.Text = result.ToString();
+
+            // сохраняем в базу
+            HistoryItem item = new HistoryItem();
+            item.Args = str;
+            item.NameOperation = cb_Operation.Text;
+            item.Time = DateTime.Now;
+            item.Result = (float)result;
+            item.Id = 10;
+
+            Repository.Save(item);
+
+            // получаем из базы всю историю
+            var history = Repository.GetAll();
+            tb_History.Clear();
+            foreach (var historyItem in history)
+            {
+                tb_History.AppendText($"{historyItem.NameOperation}({historyItem.Args})={historyItem.Result} | {historyItem.Time}\r\n");
+            }
         }
 
         private void tb_Input_KeyPress(object sender, KeyPressEventArgs e)
